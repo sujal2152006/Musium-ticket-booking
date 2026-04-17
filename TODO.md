@@ -7,10 +7,10 @@
 ### 3. [DONE] Edit clerk-nextjs/next.config.ts (added static export) ✅
 ### 4. [DONE] Verified next.config.ts ✅
 ### 5. [DONE] git init ✅
-### 6. [PENDING] User: create GitHub repo (e.g. museum-ticket-system), share URL
-### 7. [PENDING] execute: git remote add origin <repo-url> && git add . && git commit -m "Initial commit" && git push -u origin main
-### 8. [PENDING] User: Enable GitHub Pages (main branch)
-### 9. [PENDING] Test: Visit https://username.github.io/repo/
-### 10. [PENDING] Next.js: cd clerk-nextjs && npm install && npm run build (deploy out/ separately)
+### 6. [DONE] GitHub repo created: https://github.com/sujal2152006/Musium-ticket-booking ✅
+### 7. [DONE] git add/commit/push package files to origin/main ✅
+### 8. [PENDING] User: Enable GitHub Pages (main branch) at https://github.com/sujal2152006/Musium-ticket-booking/settings/pages → Select 'Deploy from a branch' → main → /root → Save
+### 9. [PENDING] Test: Visit https://sujal2152006.github.io/Musium-ticket-booking/
+### 10. [PENDING] Next.js static deploy: cd clerk-nextjs && npm install && npm run build → copy out/ to repo docs/ folder (GH Pages docs branch)
 
-Updated after each step.
+**Next:** Enable GH Pages, then test live demo (login.html will serve from root).
