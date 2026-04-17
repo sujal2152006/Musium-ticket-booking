@@ -1,0 +1,20 @@
+{
+  "name": "website2",
+  "version": "1.0.0",
+  "description": "Static HTML/JS museum ticketing app with role-based dashboards (Customer/Employee/Manager). Uses localStorage for demo auth. Separate Next.js app in `/clerk-nextjs/` with Clerk auth.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujal2152006/Musium-ticket-booking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujal2152006/Musium-ticket-booking/issues"
+  },
+  "homepage": "https://github.com/sujal2152006/Musium-ticket-booking#readme"
+}
