@@ -1,19 +1,20 @@
 import { useSignIn } from '@clerk/nextjs';
 
 export default function SignInPage() {
-  const { signIn, setActive } = useSignIn();
+  const { signIn } = useSignIn();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
     try {
-      const result = await signIn.create({
-        emailAddress: email,
+      await signIn.create({
+        identifier: email,
         password,
       });
-      if (result.status === 'complete') {
-        setActive({ session: result.createdSessionId });
+      // Auto-redirect on success
+        window.location.href = '/';
       }
     } catch (err) {
       console.error(err);

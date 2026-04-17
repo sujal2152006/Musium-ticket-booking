@@ -1,19 +1,20 @@
 import { useSignUp } from '@clerk/nextjs';
 
 export default function SignUpPage() {
-  const { signUp, setActive } = useSignUp();
+  const { signUp } = useSignUp();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
     try {
-      const result = await signUp.create({
-        emailAddress: email,
+      await signUp.create({
+        identifier: email,
         password,
       });
-      if (result.status === 'complete') {
-        setActive({ session: result.createdSessionId });
+      // Auto-redirect on success
+        window.location.href = '/';
       }
     } catch (err) {
       console.error(err);
